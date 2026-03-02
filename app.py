@@ -286,7 +286,7 @@ st.markdown(
 
   <div class="hero-title">Campus Freelancing, Reinvented.</div>
   <div class="hero-subtitle">
-    Karyar connects skilled students with real campus opportunities — fast, fair,
+    Karyar connects skilled students with real campus opportunities that are fast, fair,
     and built for your ecosystem.
   </div>
 
@@ -311,7 +311,7 @@ st.markdown(
     """
 <div class="beige-wrap">
   <div class="section-title">What Karyar will offer</div>
-  <div class="section-note">A simple, Fiverr-inspired experience — designed for campus life.</div>
+  <div class="section-note">A simple,powerful experience designed for campus life.</div>
 </div>
 """,
     unsafe_allow_html=True
@@ -323,7 +323,7 @@ with c1:
     st.markdown(
         """
 <div class="card">
-  <div class="card-title">⚡ Post gigs in seconds</div>
+  <div class="card-title">Post gigs in seconds</div>
   <p class="card-text">Create micro-tasks like posters, PPTs, edits, coding help — and get offers quickly.</p>
 </div>
 """,
