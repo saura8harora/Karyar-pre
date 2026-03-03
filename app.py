@@ -29,24 +29,24 @@ USER_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSciohUmTNvbhliPvePCd4M_1un
 # Background stays near-black.
 # Logo: Midnight green
 
-DARK_GREEN = "#0A3323"
-MOSS_GREEN = "#839958"
-BEIGE = "#F7F4D5"
-ROSY_BROWN = "#D3968C"
-MIDNIGHT_GREEN = "#105666"
+DARK_GREEN = "#642F37"      # Puce Red
+MOSS_GREEN = "#B6B0B8"      # Pastel Purple
+BEIGE = "#F7C767"           # Orange-Yellow (Crayola)
+ROSY_BROWN = "#F9904D"      # Royal Orange
+MIDNIGHT_GREEN = "#C03A0F"  # Rust (logo color)
 
-# keep background close to black
+#background
 BG = "#06060a"
 
-# Soft beige UI tints (same styling, new beige)
-BEIGE_SOFT = "rgba(247,244,213,0.10)"
-BEIGE_BORDER = "rgba(247,244,213,0.22)"
+# Soft beige UI tints
+BEIGE_SOFT = "rgba(247,199,103,0.10)"
+BEIGE_BORDER = "rgba(247,199,103,0.22)"
 
 # Accent used where CORAL was used earlier (headline + button gradient)
 ACCENT = MIDNIGHT_GREEN
 
 
-# CSS 
+# CSS
 
 st.markdown(
     f"""
@@ -57,8 +57,8 @@ html, body, [class*="css"] {{
 
 .stApp {{
   background:
-    radial-gradient(1100px 650px at 50% -12%, rgba(16,86,102,0.16), transparent 58%),
-    radial-gradient(900px 600px at 12% 22%, rgba(10,51,35,0.22), transparent 62%),
+    radial-gradient(1100px 650px at 50% -12%, rgba(192,58,15,0.16), transparent 58%),
+    radial-gradient(900px 600px at 12% 22%, rgba(100,47,55,0.22), transparent 62%),
     linear-gradient(180deg, {BG} 0%, #07070a 55%, {BG} 100%);
   color: #f3f3f3;
 }}
@@ -86,7 +86,7 @@ html, body, [class*="css"] {{
 .logo-tagline {{
   font-size: 22px;
   font-weight: 500;
-  color: rgba(247,244,213,0.86);
+  color: rgba(246,240,228,0.86);
   margin: 0px 0 14px 0;     /* RIGHT BELOW logo */
   line-height: 1.2;
 }}
@@ -96,12 +96,12 @@ html, body, [class*="css"] {{
   line-height: 1.08;
   font-weight: 820;
   margin: 0 0 10px 0;
-  color: {ACCENT};
+  color: {ROSY_BROWN};
 }}
 
 .hero-subtitle {{
   font-size: 16.5px;
-  color: rgba(247,244,213,0.74);
+  color: rgba(246,240,228,0.74);
   margin: 0 auto;
   max-width: 860px;
 }}
@@ -118,15 +118,15 @@ html, body, [class*="css"] {{
 .pill {{
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(131,153,88,0.28);
+  border: 1px solid rgba(182,176,184,0.22);
   background: rgba(0,0,0,0.25);
-  color: rgba(247,244,213,0.78);
+  color: rgba(246,240,228,0.78);
   font-size: 13px;
 }}
 
 .soft-divider {{
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(131,153,88,0.22), transparent);
+  background: linear-gradient(90deg, transparent, rgba(182,176,184,0.16), transparent);
   margin: 20px 0 18px 0;
 }}
 
@@ -137,7 +137,7 @@ html, body, [class*="css"] {{
   padding: 22px 18px;
   border-radius: 18px;
   background:
-    radial-gradient(700px 240px at 50% 0%, rgba(247,244,213,0.18), transparent 60%),
+    radial-gradient(700px 240px at 50% 0%, rgba(247,199,103,0.16), transparent 60%),
     {BEIGE_SOFT};
   border: 1px solid {BEIGE_BORDER};
   box-shadow: 0 18px 54px rgba(0,0,0,0.33);
@@ -146,20 +146,20 @@ html, body, [class*="css"] {{
 .section-title {{
   font-size: 22px;
   font-weight: 780;
-  color: rgba(247,244,213,0.92);
+  color: rgba(246,240,228,0.92);
   margin: 2px 0 6px 0;
 }}
 
 .section-note {{
-  color: rgba(247,244,213,0.70);
+  color: rgba(246,240,228,0.70);
   margin: 0 0 18px 0;
   font-size: 14.5px;
 }}
 
 /* Feature Cards */
 .card {{
-  background: rgba(10,51,35,0.30);
-  border: 1px solid rgba(16,86,102,0.22);
+  background: rgba(100,47,55,0.20);
+  border: 1px solid rgba(192,58,15,0.18);
   border-radius: 16px;
   padding: 18px 18px 16px 18px;
   box-shadow: 0 16px 46px rgba(0,0,0,0.35);
@@ -170,19 +170,19 @@ html, body, [class*="css"] {{
 
 .card:hover {{
   transform: translateY(-3px);
-  border-color: rgba(16,86,102,0.42);
+  border-color: rgba(247,199,103,0.34);
 }}
 
 .card-title {{
   font-size: 16px;
   font-weight: 760;
-  color: rgba(247,244,213,0.92);
+  color: rgba(246,240,228,0.92);
   margin-bottom: 6px;
 }}
 
 .card-text {{
   font-size: 14px;
-  color: rgba(247,244,213,0.74);
+  color: rgba(246,240,228,0.74);
   margin: 0;
 }}
 
@@ -197,9 +197,9 @@ html, body, [class*="css"] {{
   padding: 22px 18px;
   border-radius: 18px;
   background:
-    radial-gradient(760px 260px at 50% 0%, rgba(211,150,140,0.14), transparent 60%),
-    rgba(16,86,102,0.34);
-  border: 1px solid rgba(247,244,213,0.12);
+    radial-gradient(760px 260px at 50% 0%, rgba(192,58,15,0.18), transparent 60%),
+    rgba(100,47,55,0.26);
+  border: 1px solid rgba(182,176,184,0.16);
   box-shadow: 0 18px 54px rgba(0,0,0,0.38);
   text-align: center;
 }}
@@ -207,13 +207,13 @@ html, body, [class*="css"] {{
 .cta-title {{
   font-size: 18px;
   font-weight: 820;
-  color: rgba(247,244,213,0.92);
+  color: rgba(246,240,228,0.92);
   margin-bottom: 6px;
 }}
 
 .cta-sub {{
   font-size: 14px;
-  color: rgba(247,244,213,0.72);
+  color: rgba(246,240,228,0.72);
   margin-bottom: 16px;
 }}
 
@@ -236,24 +236,24 @@ html, body, [class*="css"] {{
 
 .btn-primary {{
   color: #0b0f12 !important;
-  background: linear-gradient(135deg, {BEIGE} 0%, rgba(131,153,88,0.92) 55%, rgba(16,86,102,0.95) 100%);
-  box-shadow: 0 12px 30px rgba(16,86,102,0.22);
+  background: linear-gradient(135deg, {ACCENT} 0%, {ROSY_BROWN} 55%, {BEIGE} 100%);
+  box-shadow: 0 12px 30px rgba(192,58,15,0.22);
 }}
 
 .btn-primary:hover {{
   transform: translateY(-2px);
-  box-shadow: 0 16px 44px rgba(16,86,102,0.32);
+  box-shadow: 0 16px 44px rgba(192,58,15,0.34);
 }}
 
 .btn-secondary {{
-  color: rgba(247,244,213,0.88) !important;
+  color: rgba(246,240,228,0.88) !important;
   background: rgba(0,0,0,0.28);
-  border: 1px solid rgba(131,153,88,0.40);
+  border: 1px solid rgba(247,199,103,0.28);
 }}
 
 .btn-secondary:hover {{
   transform: translateY(-2px);
-  background: rgba(10,51,35,0.30);
+  background: rgba(100,47,55,0.22);
 }}
 
 /* Footer */
@@ -261,11 +261,11 @@ html, body, [class*="css"] {{
   margin-top: 26px;
   padding: 18px 0 6px 0;
   text-align: center;
-  color: rgba(247,244,213,0.55);
+  color: rgba(246,240,228,0.55);
   font-size: 13px;
 }}
 .footer strong {{
-  color: rgba(247,244,213,0.80);
+  color: rgba(246,240,228,0.80);
 }}
 
 /* Tiny premium beige accent line */
@@ -313,7 +313,7 @@ st.markdown(
 st.markdown('<div class="soft-divider"></div>', unsafe_allow_html=True)
 
 
-# FEATURES (beige premium wrap) 
+# FEATURES (beige premium wrap)
 
 st.markdown(
     """
@@ -399,7 +399,7 @@ with c6:
     )
 
 
-# CTA 
+# CTA
 
 st.markdown(
     f"""
