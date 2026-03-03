@@ -1,35 +1,34 @@
 import streamlit as st
 import base64
 
-# -------------------------------------------------
+
 # CONFIG
-# -------------------------------------------------
+
 st.set_page_config(
     page_title="Karyar | Campus Freelancing",
     page_icon="🧩",
     layout="wide"
 )
 
-# -------------------------------------------------
+
 # LOGO -> base64
-# -------------------------------------------------
+
 def img_to_base64(path: str) -> str:
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
 logo_base64 = img_to_base64("karyar_logo.png")
 
-# -------------------------------------------------
-# GOOGLE FORM LINKS (REPLACE THESE)
-# -------------------------------------------------
+
+# GOOGLE FORM LINKS
+
 FREELANCER_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSfTKSFW8--8xgRFAB1C6pUNpzcoRAgPN7cqILa_PE_8fDc9Tw/viewform?usp=publish-editor"
 USER_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSciohUmTNvbhliPvePCd4M_1unGne3JlsxSJ64oUPFOd60lEA/viewform?usp=publish-editor"
 
-# -------------------------------------------------
-# COLORS (UPDATED TO YOUR NEW PALETTE)
+# COLORS
 # Background stays near-black.
 # Logo: Midnight green
-# -------------------------------------------------
+
 DARK_GREEN = "#0A3323"
 MOSS_GREEN = "#839958"
 BEIGE = "#F7F4D5"
@@ -46,9 +45,9 @@ BEIGE_BORDER = "rgba(247,244,213,0.22)"
 # Accent used where CORAL was used earlier (headline + button gradient)
 ACCENT = MIDNIGHT_GREEN
 
-# -------------------------------------------------
-# CSS (SAME STRUCTURE/STYLES, ONLY COLORS UPDATED)
-# -------------------------------------------------
+
+# CSS 
+
 st.markdown(
     f"""
 <style>
@@ -283,9 +282,9 @@ html, body, [class*="css"] {{
     unsafe_allow_html=True
 )
 
-# -------------------------------------------------
+
 # HERO
-# -------------------------------------------------
+
 st.markdown(
     f"""
 <div class="hero">
@@ -313,9 +312,9 @@ st.markdown(
 
 st.markdown('<div class="soft-divider"></div>', unsafe_allow_html=True)
 
-# -------------------------------------------------
-# FEATURES (beige premium wrap) + MORE SPACE BETWEEN BOXES
-# -------------------------------------------------
+
+# FEATURES (beige premium wrap) 
+
 st.markdown(
     """
 <div class="beige-wrap">
@@ -399,9 +398,9 @@ with c6:
         unsafe_allow_html=True
     )
 
-# -------------------------------------------------
-# CTA (Buttons after features)
-# -------------------------------------------------
+
+# CTA 
+
 st.markdown(
     f"""
 <div class="cta-wrap">
@@ -417,9 +416,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# -------------------------------------------------
+
 # FOOTER
-# -------------------------------------------------
+
 st.markdown(
     """
 <div class="footer">
