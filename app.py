@@ -26,19 +26,28 @@ FREELANCER_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSfTKSFW8--8xgRFAB1C6
 USER_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSciohUmTNvbhliPvePCd4M_1unGne3JlsxSJ64oUPFOd60lEA/viewform?usp=publish-editor"
 
 # -------------------------------------------------
-# COLORS (logo + beige reference)
+# COLORS (UPDATED TO YOUR NEW PALETTE)
+# Background stays near-black.
+# Logo: Midnight green
 # -------------------------------------------------
-CORAL = "#d96c63"
-DEEP_PURPLE = "#1e0f29"
+DARK_GREEN = "#0A3323"
+MOSS_GREEN = "#839958"
+BEIGE = "#F7F4D5"
+ROSY_BROWN = "#D3968C"
+MIDNIGHT_GREEN = "#105666"
+
+# keep background close to black
 BG = "#06060a"
 
-# Beige shade (from your reference)
-BEIGE = "#efe4d6"
-BEIGE_SOFT = "rgba(239,228,214,0.10)"
-BEIGE_BORDER = "rgba(239,228,214,0.22)"
+# Soft beige UI tints (same styling, new beige)
+BEIGE_SOFT = "rgba(247,244,213,0.10)"
+BEIGE_BORDER = "rgba(247,244,213,0.22)"
+
+# Accent used where CORAL was used earlier (headline + button gradient)
+ACCENT = MIDNIGHT_GREEN
 
 # -------------------------------------------------
-# CSS
+# CSS (SAME STRUCTURE/STYLES, ONLY COLORS UPDATED)
 # -------------------------------------------------
 st.markdown(
     f"""
@@ -49,8 +58,8 @@ html, body, [class*="css"] {{
 
 .stApp {{
   background:
-    radial-gradient(1100px 650px at 50% -12%, rgba(217,108,99,0.16), transparent 58%),
-    radial-gradient(900px 600px at 12% 22%, rgba(46,16,70,0.22), transparent 62%),
+    radial-gradient(1100px 650px at 50% -12%, rgba(16,86,102,0.16), transparent 58%),
+    radial-gradient(900px 600px at 12% 22%, rgba(10,51,35,0.22), transparent 62%),
     linear-gradient(180deg, {BG} 0%, #07070a 55%, {BG} 100%);
   color: #f3f3f3;
 }}
@@ -78,7 +87,7 @@ html, body, [class*="css"] {{
 .logo-tagline {{
   font-size: 22px;
   font-weight: 500;
-  color: rgba(255,255,255,0.85);
+  color: rgba(247,244,213,0.86);
   margin: 0px 0 14px 0;     /* RIGHT BELOW logo */
   line-height: 1.2;
 }}
@@ -88,12 +97,12 @@ html, body, [class*="css"] {{
   line-height: 1.08;
   font-weight: 820;
   margin: 0 0 10px 0;
-  color: {CORAL};
+  color: {ACCENT};
 }}
 
 .hero-subtitle {{
   font-size: 16.5px;
-  color: rgba(255,255,255,0.74);
+  color: rgba(247,244,213,0.74);
   margin: 0 auto;
   max-width: 860px;
 }}
@@ -110,15 +119,15 @@ html, body, [class*="css"] {{
 .pill {{
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(131,153,88,0.28);
   background: rgba(0,0,0,0.25);
-  color: rgba(255,255,255,0.75);
+  color: rgba(247,244,213,0.78);
   font-size: 13px;
 }}
 
 .soft-divider {{
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  background: linear-gradient(90deg, transparent, rgba(131,153,88,0.22), transparent);
   margin: 20px 0 18px 0;
 }}
 
@@ -129,7 +138,7 @@ html, body, [class*="css"] {{
   padding: 22px 18px;
   border-radius: 18px;
   background:
-    radial-gradient(700px 240px at 50% 0%, rgba(239,228,214,0.18), transparent 60%),
+    radial-gradient(700px 240px at 50% 0%, rgba(247,244,213,0.18), transparent 60%),
     {BEIGE_SOFT};
   border: 1px solid {BEIGE_BORDER};
   box-shadow: 0 18px 54px rgba(0,0,0,0.33);
@@ -138,20 +147,20 @@ html, body, [class*="css"] {{
 .section-title {{
   font-size: 22px;
   font-weight: 780;
-  color: rgba(255,255,255,0.92);
+  color: rgba(247,244,213,0.92);
   margin: 2px 0 6px 0;
 }}
 
 .section-note {{
-  color: rgba(255,255,255,0.70);
+  color: rgba(247,244,213,0.70);
   margin: 0 0 18px 0;
   font-size: 14.5px;
 }}
 
 /* Feature Cards */
 .card {{
-  background: rgba(30, 15, 41, 0.74);
-  border: 1px solid rgba(217,108,99,0.16);
+  background: rgba(10,51,35,0.30);
+  border: 1px solid rgba(16,86,102,0.22);
   border-radius: 16px;
   padding: 18px 18px 16px 18px;
   box-shadow: 0 16px 46px rgba(0,0,0,0.35);
@@ -162,19 +171,19 @@ html, body, [class*="css"] {{
 
 .card:hover {{
   transform: translateY(-3px);
-  border-color: rgba(217,108,99,0.34);
+  border-color: rgba(16,86,102,0.42);
 }}
 
 .card-title {{
   font-size: 16px;
   font-weight: 760;
-  color: rgba(255,255,255,0.92);
+  color: rgba(247,244,213,0.92);
   margin-bottom: 6px;
 }}
 
 .card-text {{
   font-size: 14px;
-  color: rgba(255,255,255,0.74);
+  color: rgba(247,244,213,0.74);
   margin: 0;
 }}
 
@@ -189,9 +198,9 @@ html, body, [class*="css"] {{
   padding: 22px 18px;
   border-radius: 18px;
   background:
-    radial-gradient(760px 260px at 50% 0%, rgba(217,108,99,0.18), transparent 60%),
-    rgba(30, 15, 41, 0.60);
-  border: 1px solid rgba(255,255,255,0.10);
+    radial-gradient(760px 260px at 50% 0%, rgba(211,150,140,0.14), transparent 60%),
+    rgba(16,86,102,0.34);
+  border: 1px solid rgba(247,244,213,0.12);
   box-shadow: 0 18px 54px rgba(0,0,0,0.38);
   text-align: center;
 }}
@@ -199,13 +208,13 @@ html, body, [class*="css"] {{
 .cta-title {{
   font-size: 18px;
   font-weight: 820;
-  color: rgba(255,255,255,0.92);
+  color: rgba(247,244,213,0.92);
   margin-bottom: 6px;
 }}
 
 .cta-sub {{
   font-size: 14px;
-  color: rgba(255,255,255,0.72);
+  color: rgba(247,244,213,0.72);
   margin-bottom: 16px;
 }}
 
@@ -227,25 +236,25 @@ html, body, [class*="css"] {{
 }}
 
 .btn-primary {{
-  color: white !important;
-  background: linear-gradient(135deg, {CORAL} 0%, #b3548a 55%, #7b3bb0 100%);
-  box-shadow: 0 12px 30px rgba(217,108,99,0.25);
+  color: #0b0f12 !important;
+  background: linear-gradient(135deg, {BEIGE} 0%, rgba(131,153,88,0.92) 55%, rgba(16,86,102,0.95) 100%);
+  box-shadow: 0 12px 30px rgba(16,86,102,0.22);
 }}
 
 .btn-primary:hover {{
   transform: translateY(-2px);
-  box-shadow: 0 16px 44px rgba(217,108,99,0.35);
+  box-shadow: 0 16px 44px rgba(16,86,102,0.32);
 }}
 
 .btn-secondary {{
-  color: rgba(255,255,255,0.88) !important;
+  color: rgba(247,244,213,0.88) !important;
   background: rgba(0,0,0,0.28);
-  border: 1px solid rgba(217,108,99,0.35);
+  border: 1px solid rgba(131,153,88,0.40);
 }}
 
 .btn-secondary:hover {{
   transform: translateY(-2px);
-  background: rgba(30,15,41,0.55);
+  background: rgba(10,51,35,0.30);
 }}
 
 /* Footer */
@@ -253,11 +262,11 @@ html, body, [class*="css"] {{
   margin-top: 26px;
   padding: 18px 0 6px 0;
   text-align: center;
-  color: rgba(255,255,255,0.55);
+  color: rgba(247,244,213,0.55);
   font-size: 13px;
 }}
 .footer strong {{
-  color: rgba(255,255,255,0.80);
+  color: rgba(247,244,213,0.80);
 }}
 
 /* Tiny premium beige accent line */
@@ -286,7 +295,7 @@ st.markdown(
 
   <div class="hero-title">Campus Freelancing, Reinvented.</div>
   <div class="hero-subtitle">
-    Karyar connects skilled students with real campus opportunities that are fast, fair,
+    Karyar connects skilled students with real campus opportunities which are fast, fair,
     and built for your ecosystem.
   </div>
 
