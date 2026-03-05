@@ -1,6 +1,27 @@
 import streamlit as st
 import base64
 
+st.markdown("""
+<style>
+/* Hide Streamlit header */
+header {visibility: hidden;}
+
+/* Hide hamburger menu */
+#MainMenu {visibility: hidden;}
+
+/* Hide footer */
+footer {visibility: hidden;}
+
+/* Hide deploy/share buttons */
+[data-testid="stToolbar"] {display: none;}
+
+/* Remove top padding */
+.block-container {
+    padding-top: 1rem;
+}
+</style>
+""", unsafe_allow_html=True)
+
 
 # CONFIG
 
