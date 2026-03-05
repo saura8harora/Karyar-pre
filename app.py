@@ -1,24 +1,36 @@
 import streamlit as st
 import base64
 
+import streamlit as st
+
 st.markdown("""
 <style>
-/* Hide Streamlit header */
-header {visibility: hidden;}
 
-/* Hide hamburger menu */
-#MainMenu {visibility: hidden;}
+/* Hide top toolbar (Share, GitHub, menu) */
+[data-testid="stToolbar"] {
+    display: none;
+}
 
-/* Hide footer */
-footer {visibility: hidden;}
+/* Hide main menu */
+#MainMenu {
+    visibility: hidden;
+}
 
-/* Hide deploy/share buttons */
-[data-testid="stToolbar"] {display: none;}
+/* Hide footer (Hosted with Streamlit) */
+footer {
+    visibility: hidden;
+}
+
+/* Hide header */
+header {
+    visibility: hidden;
+}
 
 /* Remove top padding */
 .block-container {
     padding-top: 1rem;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
